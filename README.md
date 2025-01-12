@@ -1,7 +1,7 @@
 # Electricity_SQL_Project
 ![Electricity_logo](https://github.com/Andrii-Klipailo/Electricity_SQL_Project/blob/main/logo.jpg)
 ## Overview
-This project analyzes global electricity production data, focusing on the growth and share of renewable energy sources. The increasing role of renewables, such as solar, wind, hydro, and bioenergy, in the global energy mix is explored, shedding light on key trends and shifts over the past decades. By investigating data from various countries, the project identifies the leaders in the transition towards sustainable energy and assesses how renewable sources are impacting global production. It provides insights into the evolving energy landscape and offers a comparative view of the countries driving the clean energy transition. This analysis contributes to understanding the trajectory of global energy production and the future potential of renewable energy.
+This project analyzes global electricity production data, focusing on the growth and share of renewable energy sources over the past decade. The goal is to identify key trends and countries leading the transition to sustainable energy. Using SQL, the project uncovers insights into energy production patterns, highlighting the shift from traditional to renewable sources and the nations driving clean energy adoption.
 ## Objectives
 - Analyze the growth of renewable energy production over the past decade.
 - Determine the share of energy sources in total electricity production by country.
