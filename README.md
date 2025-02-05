@@ -100,7 +100,7 @@ ORDER BY energy_diff DESC
 ```
 **Fragment of the output:**
 ![output1](https://github.com/Andrii-Klipailo/Electricity_SQL_Project/blob/main/Output/answer%201.png)
-**Objective:** Identify the countries with the highest growth in renewable energy production over the past 10 years.
+
 ### 2. What is the share of each type of energy source in total electricity production in each country for the last year in the dataset?
 ```SQL
 WITH total_cte AS (
@@ -138,7 +138,7 @@ ORDER BY total_energy DESC
 ```
 **Fragment of the output:**
 ![output2](https://github.com/Andrii-Klipailo/Electricity_SQL_Project/blob/main/Output/answer%202.png)
-**Objective:** Calculate and display the share of each energy type in total electricity production for the most recent year.
+
 ### 3. Which year in the dataset was the most productive for global electricity production from nuclear energy?
 ```SQL
 SELECT year
@@ -151,7 +151,7 @@ LIMIT 1
 ```
 **Fragment of the output:**
 ![output3](https://github.com/Andrii-Klipailo/Electricity_SQL_Project/blob/main/Output/answer%203.png)
-**Objective:** Identify the year with the highest global nuclear energy production.
+
 ### 4. Which countries experienced a decline in total electricity production over any period, despite the growth in global production?
 ```SQL
 WITH total_world_energy AS ( -- CTE for calculating total energy production at the global level by years.
@@ -200,7 +200,7 @@ ORDER BY diff_to_prev_year ASC
 ```
 **Fragment of the output:**
 ![output4](https://github.com/Andrii-Klipailo/Electricity_SQL_Project/blob/main/Output/answer%204.png)
-**Objective:** Identify countries where electricity production declined over any period, despite overall global growth.
+
 ### 5. Which 5 countries have the largest difference between the minimum and maximum electricity production from natural gas over the entire period?
 ```SQL
 SELECT country
@@ -212,7 +212,7 @@ ORDER BY gas_diff_max_min DESC
 ```
 **Fragment of the output:**
 ![output5](https://github.com/Andrii-Klipailo/Electricity_SQL_Project/blob/main/Output/answer%205.png)
-**Objective:** Identify the 5 countries with the greatest variation in natural gas electricity production.
+
 ### 6. Which country was the first to start producing electricity from solar energy, and in which year did it happen?
 ```SQL
 WITH first_year_cte AS (
@@ -229,7 +229,7 @@ WHERE first_year = (SELECT MIN(first_year) FROM first_year_cte)
 ```
 **Fragment of the output:**
 ![output6](https://github.com/Andrii-Klipailo/Electricity_SQL_Project/blob/main/Output/answer%206.png)
-**Objective:** Find the first country to produce electricity from solar energy and the year it started.
+
 ### 7. Which countries in 2023 produced more electricity from renewable sources than from coal?
 ```SQL
 WITH coal_and_renew AS (
@@ -250,7 +250,7 @@ ORDER BY coal_renew_diff DESC
 ```
 **Fragment of the output:**
 ![output7](https://github.com/Andrii-Klipailo/Electricity_SQL_Project/blob/main/Output/answer%207.png)
-**Objective:** Identify countries that produced more electricity from renewables than coal in 2023.
+
 ### 8. Which countries over the last 10 years produced more electricity from renewable sources compared to coal by a factor of 2 or more?
 ```SQL
 SELECT country
@@ -265,7 +265,7 @@ ORDER BY total_renewables DESC
 ```
 **Fragment of the output:**
 ![output8](https://github.com/Andrii-Klipailo/Electricity_SQL_Project/blob/main/Output/answer%208.png)
-**Objective:** Identify countries that have produced more electricity from renewable sources than coal by a factor of 2 or more in the last 10 years.
+
 ### 9. Which type of energy (coal or renewable sources) dominated in each country in terms of production volume over the entire period (from 1965 to 2023)?
 ```SQL
 SELECT country
@@ -277,7 +277,7 @@ GROUP BY country
 ```
 **Fragment of the output:**
 ![output9](https://github.com/Andrii-Klipailo/Electricity_SQL_Project/blob/main/Output/answer%209.png)
-**Objective:** Determine whether coal or renewable energy dominated electricity production in each country from 1965 to 2023.
+
 ### 10. Which countries over the last 10 years have produced more than 60% of their electricity from renewable sources?
 ```SQL
 WITH renew_and_total_cte AS (
@@ -299,7 +299,7 @@ WHERE renew_total_proportion = 'Above 60%'
 ```
 **Fragment of the output:**
 ![output10](https://github.com/Andrii-Klipailo/Electricity_SQL_Project/blob/main/Output/answer%2010.png)
-**Objective:** Identify countries that have produced more than 60% of their electricity from renewable sources over the past 10 years.
+
 ## Findings and Conclusion
 - **Growth in Renewables:** Many countries have made significant progress in increasing electricity production from renewable sources in the last decade, with some nations leading the way in wind, solar, and hydroelectric power generation.
 - **Energy Distribution:** Renewable energy sources such as wind, solar, and bioenergy have become a major component of global electricity production, contributing more in some countries than traditional sources like coal and oil.
